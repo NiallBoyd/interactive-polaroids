@@ -3,6 +3,9 @@ html {
 
   font-family: sans-serif;
 }
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
 .polaroid {
   margin: 0;
@@ -10,7 +13,6 @@ html {
   width: 250px;
   position: absolute;
   transition: all 1s linear;
-
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, .5);
@@ -27,7 +29,7 @@ html {
 }
 
 .polaroid:first-child {
-  transition: rotate(-12deg);
+  transition: rotate;
   left: 13em;
   top: 7em;
   z-index: 1;
@@ -48,7 +50,7 @@ html {
 }
 
 .polaroid:hover {
-  box-shadow: 1px 4px 6px rgba (0,0, .8)
+  box-shadow: 1px 4px 6px rgb(0,0, .8);
   transform: rotate(0deg);
   z-index: 4;
 }
